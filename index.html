@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1280 height=768 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -52,12 +52,12 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/KeepWorking.loader.js";
+      var loaderUrl = buildUrl + "/KeepWorking_web.loader.js";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/KeepWorking.data.unityweb",
-        frameworkUrl: buildUrl + "/KeepWorking.framework.js.unityweb",
-        codeUrl: buildUrl + "/KeepWorking.wasm.unityweb",
+        dataUrl: buildUrl + "/KeepWorking_web.data.unityweb",
+        frameworkUrl: buildUrl + "/KeepWorking_web.framework.js.unityweb",
+        codeUrl: buildUrl + "/KeepWorking_web.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "KeepWorking",
@@ -104,8 +104,8 @@
 
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-        canvas.style.width = "1280px";
-        canvas.style.height = "768px";
+        canvas.style.width = "960px";
+        canvas.style.height = "600px";
       }
 
       document.querySelector("#unity-loading-bar").style.display = "block";
